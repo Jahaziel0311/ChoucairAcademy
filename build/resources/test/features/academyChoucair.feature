@@ -7,8 +7,14 @@
     @scenario
     Scenario: Search for automation course
       Given than Brandon wants to learn automation at the academy Choucair
-      When he search for the course Metodología Bancolombia  on the choucair academy platform
-      Then he find the course called course Metodología Bancolombia
+        | strUser   | strPassword    |
+        |  8820413  | Choucair2021*  |
+      When he search for the course on the choucair academy platform
+        | strCourse               |
+        | Metodología Bancolombia |
+      Then he find the course called
+        | strCourse               |
+        | Metodología Bancolombia |
 
 
 
